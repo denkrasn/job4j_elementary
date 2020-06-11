@@ -8,14 +8,14 @@ public class TriangleTest {
 
     @Test
     public void exist() {
-        boolean result = Triangle.exist(3.0, 6.0, 8.0);
-        assertThat(result, is(true));
+        boolean result = Triangle.exist(1, 2, 3);
+        assertThat(result, is(false));
 
     }
 
     @Test
     public void testExist() {
-        boolean result2 = Triangle.exist(3.0, 5.0, 8.0);
-        assertThat(result2, is(false));
+        boolean result2 = Triangle.exist(2, 3, 4);
+        assertThat(result2, is(true));
     }
 }
