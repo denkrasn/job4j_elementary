@@ -1,0 +1,24 @@
+package ru.job4j.loop;
+
+        import org.junit.Assert;
+        import org.junit.Test;
+        import ru.job4j.condition.Point;
+
+        import static org.junit.Assert.*;
+
+public class FactorialTest {
+
+    @Test
+    public void whenCalculateFactorialForFiveThenOneHundreedTwenty() {
+        int expected = 120;
+        int out = Factorial.calc(5);
+        Assert.assertEquals(expected, out);
+    }
+
+    @Test
+    public void whenCalculateFactorialForZeroThenOne() {
+        int expected = 1;
+        int out = Factorial.calc(0);
+        Assert.assertEquals(expected, out);
+    }
+}
