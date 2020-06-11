@@ -10,6 +10,6 @@ public class Triangle {
         boolean result = Triangle.exist(1, 2, 3);
         System.out.println(result);
         boolean result2 = Triangle.exist(2, 3, 4);
-        System.out.println(result);
+        System.out.println(result2);
     }
 }
