@@ -1,21 +1,19 @@
 package ru.job4j.condition;
 
-import org.junit.Test;
-import static org.hamcrest.core.Is.is;
+import static org.hamcrest.Matchers.closeTo;
 import static org.junit.Assert.assertThat;
+
+import org.junit.Test;
 
 public class TriangleTest {
 
     @Test
-    public void exist() {
-        boolean result = Triangle.exist(1, 2, 3);
-        assertThat(result, is(false));
-
-    }
-
-    @Test
-    public void testExist() {
-        boolean result2 = Triangle.exist(2, 3, 4);
-        assertThat(result2, is(true));
+    public void period() {
+        Point a = new Point(0, 0);
+        Point b = new Point(4, 0);
+        Point c = new Point(0, 4);
+        Triangle triangle = new Triangle(a, b, c);
+        double rsl = triangle.area();
+        assertThat(rsl, closeTo(2, 0.001));
     }
 }
